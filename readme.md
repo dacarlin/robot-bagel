@@ -1,37 +1,28 @@
-# Outline  
+# Protocols for automated protein production and purification that run on Transcriptic 
 
-## Protein production
+## Public protocols 
 
-Transformation, growth (or grow from Kunkel glycerol stocks, workflow would be Kunkel, transform, selection plate, mail selection plate to Genscript, rec sequencing within 48 hours, grow appropriate clone)
+Protcols that are tested and work 
 
-Grow in triplicate (abstract away the idea of plates/wells?)
+- `public/kinetics.py` for determining Michaelis-Menten parameters of BglB mutants 
 
-## Protein purification 
+## Pilot protocols 
 
-Lyse w/ BugBuster
+Protocols that are not tested and probably will not work as-is 
 
-Clarify supernatant 
+- `pilot/production_purification.py` for bacterial growth and protein purification 
+- `pilot/thermal_stability.py` 
+- `pilot/ssDNA_prep.py` prep of single-stranded DNA for Kunkel mutagenesis 
 
-Take off top half (pipet height will need to be set)
+## Protocols we need that are already provided by Transcriptic 
 
-Apply to columns 
+- transformation 
+- electrophoresis 
 
-Wash columns 
+## Data analysis tools
 
-Strongly advocating a column-based approach here! Will work a lot better than beads 
+See `bagel-fitter` (one of my repos) for automated data analysis of kinetic data 
 
-Elute 
+## Also see
 
-Quantitate and run gel 
-
-## Assay 
-
-+ `kinetics.py` is the autoprotocol for the kinetic assay 
-+ we will also want a thermal stability assay as well, easy, same as above except constant substrate concentration and extra thermal cycle step 
-
-## Data analysis 
-
-See `bagel-fitter` for automated data analysis of kinetic data 
-
-See `bagel-thermostability` for automated analysis of thermal stability data 
-
+Kunkel mutagenesis protocol (`TSkunkel` in my repos) 
